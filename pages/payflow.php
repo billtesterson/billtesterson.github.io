@@ -40,6 +40,10 @@
   <input type = "submit" value = "click here for token" />
 </form>
 
+<form method="POST" action="https://pilot-payflowlink.paypal.com">
+  
+</form>
+
 <p id = "text">
 
 </p>

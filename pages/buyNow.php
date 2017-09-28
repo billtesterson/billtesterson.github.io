@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <a href = "../index.php">HOME</a>
+  <a href = "../index.html">HOME</a>
 
   <h1>Buy Now</h1>
 

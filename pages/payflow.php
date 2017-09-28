@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <a href = "../index.php">Home</a>
+  <a href = "../index.html">Home</a>
 <h1>Payflow</h1>
 
 
@@ -41,7 +41,7 @@
 </form>
 
 <form method="POST" action="https://pilot-payflowlink.paypal.com">
-  
+
 </form>
 
 <p id = "text">

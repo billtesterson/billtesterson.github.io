@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <a href = "../index.html">Home</a>
+  <a href = "../index.php">Home</a>
 <h1>Payflow</h1>
 
 <div class = "row">
@@ -46,7 +46,7 @@
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
   <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
-  <input type = "hidden" name = "SECURETOKENID" value = "63246546787774346436" />
+  <input type = "hidden" name = "SECURETOKENID" value = "5475683654524354" />
 
   <input type = "submit" value = "click here for token" />
 </form>

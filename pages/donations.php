@@ -11,7 +11,7 @@
 <body>
 
 
-<a href ="../index.html">Home</a>
+<a href ="../index.php">Home</a>
 <br />
   <h1>Donations</h1>
   <br>

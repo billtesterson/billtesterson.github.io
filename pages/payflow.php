@@ -13,8 +13,11 @@
   <a href = "../index.html">Home</a>
 <h1>Payflow</h1>
 
-
-
+<div class = "row">
+<div class = "col-md-4">
+<p>
+  Basic
+</p>
 <form method="POST" action="https://pilot-payflowlink.paypal.com">
 <input type="hidden" name="LOGIN" value="wpittman">
 <input type="hidden" name="PARTNER" value="PayPal">
@@ -23,26 +26,45 @@
 <input type="submit" value="Click here to Purchase">
 </form>
 
+</div>
+<div class = "col-md-4">
+
+<p>
+  TOKEN
+</p>
 
 <form method="POST" action="https://pilot-payflowpro.paypal.com">
   <!-- The following fields are required: -->
   <input type="hidden" name="VENDOR" value="wpittman"/>
   <input typpe="hidden" name="USER" value="wpittman" />
-  <input type = "hidden" name = "PWD" value = "Element7430" />
+  <input type = "hidden" name ="PWD" value = "Element7430" />
   <input type="hidden" name="PARTNER" value="paypal">
   <input type="hidden" name="AMT" value="100">
   <input type="hidden" name="TRXTYPE" value="A">
+  <input type="hidden" name="RETURNURL" value="file:///C:/wamp64/www/training/index.html" />
+  <input type="hidden" name="CANCELURL" value = "file:///C:/wamp64/www/training/index.html" />
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
   <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
-  <input type = "hidden" name = "SECURETOKENID" value = "632436546346436" />
+  <input type = "hidden" name = "SECURETOKENID" value = "63246546787774346436" />
 
   <input type = "submit" value = "click here for token" />
 </form>
 
-<form method="POST" action="https://pilot-payflowlink.paypal.com">
+</div>
+<div class = "col-md-4">
+  <p>
+    Send token
+  </p>
 
+<form method="POST" action="https://pilot-payflowlink.paypal.com">
+<input type="hidden" name = "SECURETOKENID" value = "" />
+<input type="hidden" name = "SECURETOKEN" value = "" />
+<input type="hidden" name = "MODE" value = "TEST" />
+<input type = "submit" value = "click here to pay" />
 </form>
+</div>
+</div>
 
 <p id = "text">
 

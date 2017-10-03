@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <a href = "../index.html">Home</a>
+  <a href = "../index.php">Home</a>
 <div class ="container">
 
 <div class = "row">

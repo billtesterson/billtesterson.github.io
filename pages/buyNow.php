@@ -12,7 +12,7 @@
 <div class = "container">
 
 
-  <a href = "../index.html">HOME</a>
+  <a href = "../index.php">HOME</a>
 
   <h1>Buy Now</h1>
 

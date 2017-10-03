@@ -9,7 +9,7 @@
   <link rel = "stylesheet" href = "../style.css" />
 </head>
 <body>
-  <a href = "../index.html">home</a>
+  <a href = "../index.php">home</a>
   <div class = "container">
 
   </div>

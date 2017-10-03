@@ -2,3 +2,8 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+.row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

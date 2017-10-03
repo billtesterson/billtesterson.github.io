@@ -9,8 +9,10 @@
   <link rel = "stylesheet" href = "../style.css" />
 </head>
 <body>
+<div class = "container">
 
-<a href = "../index.php">home</a>
+
+<a href = "../index.html">home</a>
 
 <br />
   <h1>Payment Standard</h1>
@@ -23,7 +25,7 @@
   <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
   <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
   </form>
-
+</div>
 <script src = "../jquery-3.2.1.min(1).js"></script>
 <script src = "../script.js"></script>
 </body>

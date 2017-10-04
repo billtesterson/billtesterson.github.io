@@ -44,8 +44,13 @@
       <div class = "col-sm-4">
         <a href = "pages/paypalhere.php">PayPal Here</a>
       </div>
+
+      <div class = "col-sm-4">
+        <a href = "pages/ajax.html">AJAX</a>
+      </div>
     </div>
 
+    
   </div><!--container-->
 
 <br>

@@ -7,13 +7,31 @@
 <head>
   <link rel = "stylesheet" href = "../css/bootstrap.min.css" />
   <link rel = "stylesheet" href = "../style.css" />
+
 </head>
 <body>
   <a href = "../index.php">home</a>
   <div class = "container">
-    
 
-  </div>
+    <form id = "basic" method = "POST" action ='https://pilot-payflowlink.paypal.com'>
+    <input type="hidden" name="LOGIN" value="wpittman">
+    <input type="hidden" name="PARTNER" value="PayPal">
+    <input type="hidden" name="AMOUNT" value="5.00">
+    <input type="hidden" name="TYPE" value="S">
+    <input type="submit" value="Click here to Purchase">
+    </form>
+
+    <p id = "info">
+
+    </p>
+
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src = "../script1.js"></script>
 
 </body>
 </html>

@@ -24,10 +24,10 @@
 <div class = "col-md-4">
 <h1>Basic</h1>
 <form method="POST" action="https://pilot-payflowlink.paypal.com">
-<input type="hidden" name="LOGIN" value="wpittmanpro">
+<input type="hidden" name="LOGIN" value="wpittman">
 <input type="hidden" name="PARTNER" value="PayPal">
-<input type="hidden" name="AMT" value="200">
-<input type="hidden" name="TYPE" value="A">
+<input type="hidden" name="AMOUNT" value="5.00">
+<input type="hidden" name="TYPE" value="S">
 <input type="submit" value="Click here to Purchase">
 </form>
 
@@ -42,15 +42,15 @@
   <input type="hidden" name="USER" value="wpittmanpro" />
   <input type ="hidden" name ="PWD" value = "Element7430" />
   <input type="hidden" name="PARTNER" value="paypal">
-  <input type="hidden" name="AMT" value="200">
+  <input type="hidden" name="AMT" value="10">
 
-  <input type="hidden" name="TRXTYPE" value="A">
+  <input type="hidden" name="TRXTYPE" value="S">
   <input type="hidden" name="RETURNURL" value="file:///C:/wamp64/www/training/index.php" />
   <input type="hidden" name="CANCELURL" value = "file:///C:/wamp64/www/training/index.php" />
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
   <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
-  <input type = "hidden" name = "SECURETOKENID" value = "5474645464564547"/>
+  <input type = "hidden" name = "SECURETOKENID" value = "848657546"/>
 
   <input type = "submit" value = "click here for token" />
 </form>
@@ -60,8 +60,8 @@
   <h1>Send Token</h1>
 
 <form method="POST" action="https://pilot-payflowlink.paypal.com">
-<input type="hidden" name = "SECURETOKENID" value = "5474645464564547" />
-<input type="hidden" name = "SECURETOKEN" value = "9YCecUkLIr0WPwqnQiDMpawHX" />
+<input type="hidden" name = "SECURETOKENID" value = "848657546" />
+<input type="hidden" name = "SECURETOKEN" value = "90T6KrVNigESxoeRWHnIaZw2j" />
 <input type="hidden" name = "MODE" value = "TEST" />
 <input type = "submit" value = "click here to pay" />
 </form>
@@ -72,13 +72,13 @@
   <div class = "col-md-4">
     <h1>Delayed Capture</h1>
     <form method="POST" action="https://pilot-payflowpro.paypal.com">
-      <input type="hidden" name="VENDOR" value="wpittman" />
-      <input type="hidden" name="USER" value="wpittman" />
+      <input type="hidden" name="VENDOR" value="wpittmanpro" />
+      <input type="hidden" name="USER" value="wpittmanpro" />
       <input type="hidden" name="PWD" value="Element7430" />
       <input type="hidden" name="PARTNER" value="paypal" />
       <input type="hidden" name='AMT' value="80" />
       <input type="hidden" name="TRXTYPE" value="D" />
-      <input type="hidden" name="ORIGID" value="A10AA7104DCC" />
+      <input type="hidden" name="ORIGID" value="A10AA71ABB7B" />
       <input type="hidden" name="CAPTURECOMPLETE" value="N"
       <input type="hidden" name="VERBOSITY" value="HIGH" />
       <input type="submit" value="Delayed Capture" />
@@ -88,13 +88,13 @@
   <div class = "col-md-4">
     <h1>Credit</h1>
     <form method="POST" action="https://pilot-payflowpro.paypal.com">
-      <input type="hidden" name="VENDOR" value="wpittman" />
-      <input type="hidden" name="USER" value="wpittman" />
+      <input type="hidden" name="VENDOR" value="wpittmanpro" />
+      <input type="hidden" name="USER" value="wpittmanpro" />
       <input type="hidden" name="PWD" value="Element7430" />
       <input type="hidden" name="PARTNER" value="paypal" />
       <input type="hidden" name='AMT' value="200" />
       <input type="hidden" name="TRXTYPE" value="C" />
-      <input type="hidden" name="ORIGID" value="A70AA57838D6" />
+      <input type="hidden" name="ORIGID" value="A70AA582B9AE" />
       <input type="hidden" name="VERBOSITY" value="HIGH" />
       <input type="submit" value="Credit" />
     </form>
@@ -103,14 +103,14 @@
   <div class = "col-md-4">
     <h1>Voice Authorization</h1>
     <form method="POST" action="https://pilot-payflowpro.paypal.com">
-      <input type="hidden" name="VENDOR" value="wpittman" />
-      <input type="hidden" name="USER" value="wpittman" />
+      <input type="hidden" name="VENDOR" value="wpittmanpro" />
+      <input type="hidden" name="USER" value="wpittmanpro" />
       <input type="hidden" name="PWD" value="Element7430" />
       <input type="hidden" name="PARTNER" value="paypal" />
       <input type="hidden" name='AMT' value="200" />
       <input type="hidden" name="TRXTYPE" value="F" />
       <input type="hidden" name="TENDER" value="C" />
-      <input type="hidden" name="AUTHCODE" value="123456" /><!--randomly enter 6-digit?-->
+      <input type="hidden" name="AUTHCODE" value="123226" /><!--randomly enter 6-digit?-->
       <input type="hidden" name="ACCT" value="4111111111111111" />
       <input type="hidden" name="EXPDATE" value="0923" />
       <input type="hidden" name="CVV2" value="123" />
@@ -187,13 +187,13 @@
   <div class = "col-md-4">
     <h1>Inquiry Trans</h1>
     <form method="POST" action="https://pilot-payflowpro.paypal.com">
-      <input type="hidden" name="VENDOR" value="wpittman" />
-      <input type="hidden" name="USER" value="wpittman" />
+      <input type="hidden" name="VENDOR" value="wpittmanpro" />
+      <input type="hidden" name="USER" value="wpittmanpro" />
       <input type="hidden" name="PWD" value="Element7430" />
       <input type="hidden" name="PARTNER" value="paypal" />
       <input type="hidden" name="TRXTYPE" value ="I" />
       <input type="hidden" name="TENDER" value="C" />
-      <input type="hidden" name="ORIGID" value="A10AA7106680"  />
+      <input type="hidden" name="ORIGID" value="A70AA582B9AE"  />
       <input type="submit" value="Inquire" />
     </form>
   </div>
@@ -216,19 +216,8 @@
     </div>
 
     <div class = 'col-md-4'>
-      <h1>Duplicate</h1>
-      <form method="POST" action="https://pilot-payflowpro.paypal.com">
-        <input type="hidden" name="VENDOR" value="wpittman" />
-        <input type="hidden" name="USER" value="wpittman" />
-        <input type="hidden" name="PWD" value="Element7430" />
-        <input type="hidden" name="PARTNER" value="paypal" />
-        <input type="hidden" name='AMT' value="200" />
-        <input type="hidden" name="TRXTYPE" value="S" />
-        <input type="hidden" name="TENDER" value="C" />
-        <input type="hidden" name="ORIGID" value="A70AA57838D6" />
-        <input type="hidden" name="VERBOSITY" value="HIGH" />
-        <input type="submit" value="Duplicate" />
-      </form>
+      <a href = "recurringbilling.php"><h1>Recurring Billing</h1></a>
+
     </div>
 
 </div>

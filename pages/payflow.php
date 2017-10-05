@@ -55,7 +55,7 @@
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
   <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
-  <input type = "hidden" name = "SECURETOKENID" value = "848657546"/>
+  <input type = "hidden" name = "SECURETOKENID" value = "1110099546"/>
 
   <input type = "submit" value = "click here for token" />
 </form>
@@ -65,8 +65,8 @@
   <h1>Send Token</h1>
 
 <form method="POST" action="https://pilot-payflowlink.paypal.com">
-<input type="hidden" name = "SECURETOKENID" value = "848657546" />
-<input type="hidden" name = "SECURETOKEN" value = "90T6KrVNigESxoeRWHnIaZw2j" />
+<input type="hidden" name = "SECURETOKENID" value = "1110099546" />
+<input type="hidden" name = "SECURETOKEN" value = "8eZg37qJUkUaknEmoPrFROQ2i" />
 <input type="hidden" name = "MODE" value = "TEST" />
 <input type = "submit" value = "click here to pay" />
 </form>
@@ -225,6 +225,46 @@
 
     </div>
 
+</div>
+
+<div class = "row">
+  <div class = "col-md-4">
+    <a href = "fps.php"><h1>FPS</h1></a>
+  </div>
+
+  <div class = "col-md-4">
+    <a href = "ach.php"><h1>ACH</h1></a>
+  </div>
+
+</div>
+
+<div class = "row">
+  <div class = "col-md-4">
+    <h1>String test</h1>
+    <form method="POST" action="passStringSale.php">
+      <br /><br />
+      <div align="center">
+        <table border="0" width="350" height="30">
+        <tr>
+          <td width="200" height="30">Host URL: </td>
+          <td width="200" height="30"><input type="text" value="https://pilot-payflowpro.paypal.com" name="GHostURL" size="35"></td>
+        </tr>
+        <tr>
+          <td width="200">PAYPAL-NVP:</font></b></td>
+          <td width="200"><SELECT NAME="passPaypalNVP">
+    		<OPTION VALUE="0">No</option>
+    		<OPTION VALUE="1">Yes</option>
+             </SELECT>
+          </td>
+        </tr>
+      </table>
+
+      <p><textarea name="strBody" cols="80" rows="10">
+    
+    </textarea></p>
+      </div><p><input type="submit" value="Process" name="B1"></p>
+    </form>
+  </div>
 </div>
 
 <p id = "text">

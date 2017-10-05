@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Pass Your Parameters</title>
+</head>
+
+<body>
+<center>
+<form method="POST" action="passStringSale.php">
+  <br /><br />
+  <div align="center">
+    <table border="0" width="350" height="30">
+    <tr>
+      <td width="200" height="30">Host URL: </td>
+      <td width="200" height="30"><input type="text" value="https://pilot-payflowpro.paypal.com" name="GHostURL" size="35"></td>
+    </tr>
+    <tr>
+      <td width="200">PAYPAL-NVP:</font></b></td>
+      <td width="200"><SELECT NAME="passPaypalNVP">
+		<OPTION VALUE="0">No</option>
+		<OPTION VALUE="1">Yes</option>
+         </SELECT>
+      </td>
+    </tr>
+  </table>
+
+  <p><textarea name="strBody" cols="80" rows="10">
+TENDER=C&ACCT=5105105105105100&PWD=xfiles1&USER=mcgovernrt2&VENDOR=mcgovernrt2&PARTNER=verisign&EXPDATE=1219&CVV=123&AMT=1.00&TRXTYPE=A&CURRENCY=USD&FIRSTNAME=Crash&LASTNAME=OverRide&EMAIL=rabbit@paypal.com&STREET=123Main St&CITY=CyberCity&STATE=CA&ZIP=21345&COUNTRY=US&SHIPTOSTREET=123 Main St&SHIPTOCITY=CyberCity&SHIPTOSTATE=NE&SHIPTOZIP=23456&SHIPTOCOUNTRY=US&COMMENT1=PayPal-Tech&COMMENT2=Testing&VERBOSITY=LOW
+</textarea></p>
+  </div><p><input type="submit" value="Process" name="B1"></p>
+</form>
+<center>
+</body>
+</html>

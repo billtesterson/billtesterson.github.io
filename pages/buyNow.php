@@ -7,14 +7,17 @@
 <head>
   <link rel = "stylesheet" href = "../css/bootstrap.min.css" />
   <link rel = "stylesheet" href = "../style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+  <script>
+  $(function(){
+    $('#header').load('../nav.html');
+  });
+  </script>
+<div id = "header"></div>
 <div class = "container">
-
-
-  <a href = "../index.php">HOME</a>
-
-  <h1>Buy Now</h1>
+<h1>Buy Now</h1>
 
   <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
   <input type="hidden" name="cmd" value="_s-xclick">

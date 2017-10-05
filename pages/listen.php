@@ -15,12 +15,10 @@
     $('#header').load('../nav.html');
   });
   </script>
-<div id = "header"></div>
-  <div class = "container">
+  <div id = "header"></div>
+  
 
-
-  </div>
-  <script src = "jquery-3.2.1.min(1).js"></script>
-  <script src = "script.js"></script>
-</body>
-</html>
+  <script src = "../jquery-3.2.1.min(1).js"></script>
+  <script src = "../script.js"></script>
+  </body>
+  </html>

@@ -10,7 +10,12 @@
 
 </head>
 <body>
-  <a href = "../index.php">home</a>
+  <script>
+  $(function(){
+    $('#header').load('../nav.html');
+  });
+  </script>
+<div id = "header"></div>
   <div class = "container">
 
     <form id = "basic" method = "POST" action ='https://pilot-payflowlink.paypal.com'>

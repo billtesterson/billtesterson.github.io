@@ -7,9 +7,16 @@
 <head>
   <link rel = "stylesheet" href = "css/bootstrap.min.css" />
   <link rel = "stylesheet" href = "style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.php">Will's Test Tools</a>
+    </div>
+    </div>
+  </nav>
   <div class = "container">
     <div class = "row">
       <div class = "col-sm-6 col-sm-offset-3">
@@ -20,13 +27,13 @@
     <br />
     <div class = 'row'>
       <div class = "col-sm-4">
-        <a href = "pages/paymentStandard.php">Payment Standard</a>
+        <a href = "pages/payflow.php"><img class = "logo" src = "logos/payflow.png" /></a>
       </div>
       <div class = "col-sm-4">
-        <a href = "pages/donations.php">Donations</a>
+        <a href = "pages/paypalhere.php"><img class = "logo" src = "logos/here.jpg" /></a>
       </div>
       <div class = "col-sm-4">
-        <a href = "pages/buyNow.php">Buy Now</a>
+        <a href = "pages/braintree.php"><img class = "logo" src = "logos/braintree.png" /></a>
       </div>
 
     </div><!--row-->
@@ -38,11 +45,11 @@
 
     <div class = "row">
       <div class = "col-sm-4">
-        <a href = "pages/payflow.php">Payflow</a>
+        <a href = "pages/paymentStandard.php">Payment Standard</a>
       </div>
 
       <div class = "col-sm-4">
-        <a href = "pages/paypalhere.php">PayPal Here</a>
+        <a href = "pages/donations.php">Donations</a>
       </div>
 
       <div class = "col-sm-4">
@@ -51,6 +58,8 @@
     </div>
 
     
+
+
   </div><!--container-->
 
 <br>

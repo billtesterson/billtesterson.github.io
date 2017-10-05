@@ -10,17 +10,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <script>
-  $(function(){
-    $('#header').load('../nav.html');
-  });
-  </script>
-<div id = "header"></div>
-  <div class = "container">
+<script>
+$(function(){
+  $("#header").load('../nav.html');
+});
+</script>
+<div id = "header">
 
+</div>
 
-  </div>
-  <script src = "jquery-3.2.1.min(1).js"></script>
-  <script src = "script.js"></script>
+<script src = "jquery-3.2.1.min(1).js"></script>
+<script src = "script.js"></script>
 </body>
 </html>

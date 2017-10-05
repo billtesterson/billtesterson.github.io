@@ -7,16 +7,22 @@
 <head>
   <link rel = "stylesheet" href = "../css/bootstrap.min.css" />
   <link rel = "stylesheet" href = "../style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-  <a href = "../index.php">home</a>
-  <a href = "payflow.php">payflow</a>
+  <script>
+  $(function(){
+    $('#header').load('../nav.html');
+  });
+  </script>
+<div id = "header"></div>
+<a href = "payflow.php">back to payflow</a>
   <div class = "container">
 
     <div class = "row">
       <div class ="col-md-4 col-md-offset-4">
         <div class = "jumbotron">
-          <h1>Recurring Billing</h1>
+          <h1>RB</h1>
         </div>
       </div>
     </div>
@@ -113,6 +119,7 @@
 
   </div>
 
-<script src = "../script.js"></script>
+  <script src = "jquery-3.2.1.min(1).js"></script>
+  <script src = "script.js"></script>
 </body>
 </html>

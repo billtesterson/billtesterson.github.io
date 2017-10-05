@@ -43,6 +43,26 @@
       <br />
     </div>
 
+    <div class ="row">
+      <div class = "col-sm-4">
+        <a href = "pages/expresscheck.php"><img class = "logo" src = "logos/expresscheckout.png" /></a>
+      </div>
+
+      <div class = "col-sm-4">
+        <a href = "pages/xoom.php"><img class = "logo" src = "logos/xoom.png" /></a>
+      </div>
+
+      <div class = "col-sm-4">
+        <a href = "pages/venmo.php"><img class = "logo" src = "logos/venmo.png" /></a>
+      </div>
+    </div>
+
+    <div class = "row">
+      <br />
+      <br />
+      <br />
+    </div>
+
     <div class = "row">
       <div class = "col-sm-4">
         <a href = "pages/paymentStandard.php">Payment Standard</a>

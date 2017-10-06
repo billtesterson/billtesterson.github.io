@@ -17,7 +17,7 @@
   </script>
   <div id = "header"></div>
 <div class ="container">
-
+<a href = "try.html">TRY</a>
 <div class = "row">
   <div class ="col-md-4 col-md-offset-4">
     <div class = "jumbotron">
@@ -236,6 +236,10 @@
     <a href = "ach.php"><h1>ACH</h1></a>
   </div>
 
+  <div class = "col-md-4">
+    <a href = "trans.php"><h1>Transparent Redirect</h1></a>
+  </div>
+
 </div>
 
 <div class = "row">
@@ -260,7 +264,7 @@
       </table>
 
       <p><textarea name="strBody" cols="80" rows="10">
-    
+
     </textarea></p>
       </div><p><input type="submit" value="Process" name="B1"></p>
     </form>

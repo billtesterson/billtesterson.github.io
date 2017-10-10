@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reportingEngineRequest>
+  <authRequest>
+    <user>wpittmanpro</user>
+    <vendor>wpittmanpro</vendor>
+    <partner>paypal</partner>
+    <password>Element7430</password>
+  </authRequest>
+  <runReportRequest>
+    <reportName>DailyActivityReport</reportName>
+    <reportParam>
+      <paramName>report_date</paramName>
+      <paramValue>2017-10-9</paramValue>
+    </reportParam>
+    <pageSize>50</pageSize>
+  </runReportRequest>
+</reportingEngineRequest>

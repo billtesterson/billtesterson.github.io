@@ -1,3 +1,7 @@
+<?php
+$id = rand();
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -41,8 +45,9 @@
 
 <h1>Token</h1>
 
-<form method="POST" action="https://pilot-payflowpro.paypal.com">
+<form method="POST" action="token.php">
   <!-- The following fields are required: -->
+  <input type = "hidden" name = "URL" value = "https://pilot-payflowpro.paypal.com" />
   <input type="hidden" name="VENDOR" value="wpittmanpro"/>
   <input type="hidden" name="USER" value="wpittmanpro" />
   <input type ="hidden" name ="PWD" value = "Element7430" />
@@ -50,26 +55,17 @@
   <input type="hidden" name="AMT" value="10">
 
   <input type="hidden" name="TRXTYPE" value="S">
-  <input type="hidden" name="RETURNURL" value="file:///C:/wamp64/www/training/index.php" />
-  <input type="hidden" name="CANCELURL" value = "file:///C:/wamp64/www/training/index.php" />
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
   <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
-  <input type = "hidden" name = "SECURETOKENID" value = "1110099546"/>
+  <input type = "hidden" name = "SECURETOKENID" value = "<?php echo $id; ?>"/>
 
   <input type = "submit" value = "click here for token" />
 </form>
 
 </div>
 <div class = "col-md-4">
-  <h1>Send Token</h1>
-
-<form method="POST" action="https://pilot-payflowlink.paypal.com">
-<input type="hidden" name = "SECURETOKENID" value = "1110099546" />
-<input type="hidden" name = "SECURETOKEN" value = "8eZg37qJUkUaknEmoPrFROQ2i" />
-<input type="hidden" name = "MODE" value = "TEST" />
-<input type = "submit" value = "click here to pay" />
-</form>
+  <a href = "trans.php"><h1>Transparent Redirect</h1></a>
 </div>
 </div>
 
@@ -237,8 +233,10 @@
   </div>
 
   <div class = "col-md-4">
-    <a href = "trans.php"><h1>Transparent Redirect</h1></a>
+    <a href = "report.php"><h1>XML Report</h1></a>
   </div>
+
+
 
 </div>
 
@@ -307,7 +305,7 @@ $("#text").write("Hello");
 </script>
 
 
-<script src = "../jquery-3.2.1.min(1).js"></script>
+
 <script src = "../script.js"></script>
 </body>
 </html>

@@ -33,10 +33,10 @@
         <a href = "pages/payflow.php"><img class = "logo" src = "logos/payflow.png" /></a>
       </div>
       <div class = "col-sm-4">
-        <a href = "pages/paypalhere.php"><img class = "logo" src = "logos/here.jpg" /></a>
+        <a href = "pphere/paypalhere.php"><img class = "logo" src = "logos/here.jpg" /></a>
       </div>
       <div class = "col-sm-4">
-        <a href = "pages/braintree.php"><img class = "logo" src = "logos/braintree.png" /></a>
+        <a href = "braintree/braintree.php"><img class = "logo" src = "logos/braintree.png" /></a>
       </div>
 
     </div><!--row-->
@@ -48,15 +48,15 @@
 
     <div class ="row">
       <div class = "col-sm-4">
-        <a href = "pages/expresscheck.php"><img class = "logo" src = "logos/expresscheckout.png" /></a>
+        <a href = "ec/expresscheck.php"><img class = "logo" src = "logos/expresscheckout.png" /></a>
       </div>
 
       <div class = "col-sm-4">
-        <a href = "pages/xoom.php"><img class = "logo" src = "logos/xoom.png" /></a>
+        <a href = "xoom/xoom.php"><img class = "logo" src = "logos/xoom.png" /></a>
       </div>
 
       <div class = "col-sm-4">
-        <a href = "pages/venmo.php"><img class = "logo" src = "logos/venmo.png" /></a>
+        <a href = "venmo/venmo.php"><img class = "logo" src = "logos/venmo.png" /></a>
       </div>
     </div>
 

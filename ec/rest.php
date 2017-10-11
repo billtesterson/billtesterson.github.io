@@ -16,40 +16,24 @@
   });
   </script>
   <div id = "header"></div>
+  <a href = "expresscheck.php">back to ec</a>
   <div class = "container">
     <div class = "row">
       <div class ="col-md-4 col-md-offset-4">
         <div class = "jumbotron">
-          <h1>Express</h1>
-          <h3>Checkout</h3>
+          <h1>REST Api</h1>
         </div>
       </div>
     </div>
 
     <div class = "row">
       <div class = "col-md-4">
-        <a href = "sdk/merchant-sdk-php/samples"><h1>Classic Merchant</h1></a>
+        <a href = "PayPal-PHP-SDK/sample/index.php"><h1>Samples</h1></a>
       </div>
-
-      <div class = "col-md-4">
-        <a href = "rest.php"><h1>REST APIs</h1></a>
-      </div>
-
-
-    <div class = "col-md-4">
-      <a href = "storeForm.php"><h1>Store Card Info(php)</h1></a>
     </div>
   </div>
 
-  <div class = "row">
-    <div class = "col-md-4">
-      <a href = "button.html"><h1>Basic Button</h1></a>
-    </div>
-  </div>
-  </div>
 
-
-  <script src = "../jquery-3.2.1.min(1).js"></script>
   <script src = "../script.js"></script>
   </body>
   </html>

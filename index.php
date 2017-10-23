@@ -68,7 +68,7 @@
 
     <div class = "row">
       <div class = "col-sm-4">
-        <a href = "pages/paymentStandard.php">Payment Standard</a>
+        <a href = "pro/pppro.php"><img class = "logo" src = "logos/pppro.png" /></a>
       </div>
 
       <div class = "col-sm-4">
@@ -83,6 +83,14 @@
     <div class = "row">
       <div class = "col-sm-4">
         <a href = "pages/listen.php">listen</a>
+      </div>
+
+      <div class = "col-sm-4">
+        <a href = "pages/paymentStandard.php">Payment Standard</a>
+      </div>
+
+      <div class = "col-sm-4">
+        <a href = "pages/ipnex.php">IPN</a>
       </div>
     </div>
 

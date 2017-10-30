@@ -14,7 +14,6 @@ $token = $_REQUEST['CREATESECURETOKEN'];
 
 
 
-
 $headers[] = "Content-Type: text/namevalue";
 // Set the server timeout value to 45, but notice below in the cURL section, the timeout
 // for cURL is set to 90 seconds.  Make sure the server timeout is less than the connection.
@@ -69,10 +68,25 @@ $token_response = curl_exec($ch);
 <br />
 <?php echo "Response: $token_response"; ?>
 
+<?php
+
+$token_ar = explode('&', $token_response);
+
+
+$token_id = $token_ar[2];
+$token1 = explode('=', $token_id);
+
+
+
+echo "<iframe src = 'https://pilot-payflowlink.paypal.com?SECURETOKEN=$token1[1]&SECURETOKENID=$tokenid&MODE=TEST' width='490px' height='565px' border='0'
+  frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
+
+?>
+
 
 
 <form method = "POST" action = "https://pilot-payflowlink.paypal.com">
-  <input type = "text" name = "SECURETOKEN" placeholder="token" />
+  <input type = "text" name = "SECURETOKEN" value = "<?php echo $token1[1]; ?>"/>
   <input type = "text" name = "SECURETOKENID" value = "<?php echo $tokenid; ?>" />
   <input type = "submit" value = "submit" />
 </form>

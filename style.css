@@ -16,3 +16,25 @@
 .jumbotron {
   text-align: center;
 }
+
+img {
+
+}
+
+#row1 {
+
+}
+
+#samp {
+  column-span: all;
+}
+
+#sampimg {
+width: 200px;
+height: 100px;
+}
+
+#select {
+width: 200px;
+margin-bottom: 20px;
+}

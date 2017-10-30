@@ -22,7 +22,7 @@ $state = $_REQUEST['STATE'];
 $zip = $_REQUEST['Zip'];
 $country_code = $_REQUEST['COUNTRYCODE'];
 $method = $_REQUEST['METHOD'];
-$ip = $_REQUEST['IPADDRESS'];
+$ip = $_SERVER['REMOTE_ADDR'];
 
 $headers[] = "Content-Type: text/namevalue";
 
@@ -89,6 +89,50 @@ $response = curl_exec($ch);
       <input type = "hidden" name = "VERSION" value = "58.0" />
       <input type = "text" name = "AUTHORIZATIONID"  />
       <input type = "submit" name = "METHOD" value = "DoCapture" />
+    </form>
+  </div>
+
+    <div class = "col-md-4">
+      <h1>DoVoid</h1>
+      <form method = 'post' action = "https://api-3t.sandbox.paypal.com/nvp">
+        <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
+        <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
+        <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
+        <input type = "hidden" name = "VERSION" value = "58.0" />
+        <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
+        <input type = "text" name = "AUTHORIZATIONID" />
+        <input type = "submit" name = "METHOD" value = "DoVoid" />
+      </form>
+    </div>
+
+    <div class = "col-md-4">
+      <h1>GetTransactionDetails</h1>
+      <form method = 'post' action = "https://api-3t.sandbox.paypal.com/nvp">
+        <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
+        <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
+        <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
+        <input type = "hidden" name = "VERSION" value = "58.0" />
+        <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
+        <input type = "text" name = "TRANSACTIONID" placeholder="transId"/>
+        <input type = "submit" name = "METHOD" value = "GetTransactionDetails" />
+      </form>
+    </div>
+</div>
+
+<div class = "row">
+  <div class = "col-md-4">
+    <h1>RefundTransaction</h1>
+    <form method = 'post' action = "https://api-3t.sandbox.paypal.com/nvp">
+      <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
+      <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
+      <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
+      <input type = "hidden" name = "VERSION" value = "58.0" />
+      <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
+      <input type = "text" name = "TRANSACTIONID" placeholder="transId"/><br />
+      <input type = "radio" name = "REFUNDTYPE" value = "Full" checked />Full
+      <input type = "radio" name = "REFUNDTYPE" value = "Partial" />Partial<br />
+      <input type = "text" name = "AMT" placeholder = "only if partial refund" /><br /><br />
+      <input type = "submit" name = "METHOD" value = "RefundTransaction" />
     </form>
   </div>
 </div>

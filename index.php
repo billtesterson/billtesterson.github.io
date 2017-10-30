@@ -94,6 +94,14 @@
       </div>
     </div>
 
+    <div class = 'row'>
+      <div class = "col-md-4">
+        <a href = "rest/rest1.php"><h1>REST</h1></a>
+      </div>
+    </div>
+
+
+
 
   </div><!--container-->
 

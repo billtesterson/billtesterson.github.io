@@ -53,11 +53,11 @@ $id = rand();
   <input type ="hidden" name ="PWD" value = "Element7430" />
   <input type="hidden" name="PARTNER" value="paypal">
   <input type="hidden" name="AMT" value="10">
-
+  <input type = "hidden" name = "TENDER" value = "C" />
   <input type="hidden" name="TRXTYPE" value="S">
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
-  <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
+ <input type="hidden" name="CREATESECURETOKEN" value = "Y" />
   <input type = "hidden" name = "SECURETOKENID" value = "<?php echo $id; ?>"/>
 
   <input type = "submit" value = "click here for token" />
@@ -267,7 +267,10 @@ $id = rand();
       </div><p><input type="submit" value="Process" name="B1"></p>
     </form>
   </div>
+
 </div>
+
+
 
 <p id = "text">
 

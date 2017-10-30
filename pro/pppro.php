@@ -26,7 +26,7 @@
   </div>
 
   <div class = "row">
-    <div class = 'col-md-4'>
+    <div class = 'col-md-4 col-md-offset-4'>
       <div class="creditCardForm">
       <div class="heading">
           <h1>DoDirectPayment(auth)</h1>
@@ -51,6 +51,23 @@
                   <label for="cardNumber">Card Number</label>
                   <input type="text" name = "cardnum" class="form-control" id="cardNumber">
               </div>
+              <h3>Address</h3><br />
+              <div class="form-group owner">
+                  <label for="owner">Street</label>
+                  <input type="text" name = "STREET" class="form-control" id="owner">
+              </div>
+              <div class="form-group owner">
+                  <label for="owner">City</label>
+                  <input type="text" name = "CITY" class="form-control" id="owner">
+              </div>
+              <div class="form-group owner">
+                  <label for="owner">State</label>
+                  <input type="text" name = "STATE" class="form-control" id="owner">
+              </div>
+              <div class="form-group owner">
+                  <label for="owner">Zip</label>
+                  <input type="text" name = "Zip" class="form-control" id="owner">
+              </div>
               <div class="form-group" id="expiration-date">
                   <label>Expiration Date</label>
                   <select name = "month">
@@ -97,14 +114,9 @@
               <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
               <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
               <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
-              <input type = "hidden" name = "IPADDRESS" value = "10.248.136.24" />
               <input type = "hidden" name = 'PAYMENTACTION' value = "Authorization" />
               <input type = "hidden" name = "AMT" value = "20.00" />
               <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
-              <input type = "hidden" name = "STREET" value = "123 main" />
-              <input type = "hidden" name = "CITY" value = "omaha" />
-              <input type = "hidden" name = "STATE" value = "NE" />
-              <input type = "hidden" name = "Zip" value = "68144" />
               <input type = "hidden" name = "COUNTRYCODE" value = "US" />
               <input type = "hidden" name = "VERSION" value = "58.0" />
               <div class="form-group" id="pay-now">
@@ -119,7 +131,7 @@
   </div>
 
   <div class = "row">
-    <div class = 'col-md-4'>
+    <div class = 'col-md-4 col-md-offset-4'>
       <div class="creditCardForm">
       <div class="heading">
           <h1>DoDirectPayment(sale)</h1>
@@ -144,6 +156,23 @@
                   <label for="cardNumber">Card Number</label>
                   <input type="text" name = "cardnum" class="form-control" id="cardNumber">
               </div>
+              <h3>Address</h3><br />
+              <div class="form-group owner">
+                  <label for="owner">Street</label>
+                  <input type="text" name = "STREET" class="form-control" id="owner">
+              </div>
+              <div class="form-group owner">
+                  <label for="owner">City</label>
+                  <input type="text" name = "CITY" class="form-control" id="owner">
+              </div>
+              <div class="form-group owner">
+                  <label for="owner">State</label>
+                  <input type="text" name = "STATE" class="form-control" id="owner">
+              </div>
+              <div class="form-group owner">
+                  <label for="owner">Zip</label>
+                  <input type="text" name = "Zip" class="form-control" id="owner">
+              </div>
               <div class="form-group" id="expiration-date">
                   <label>Expiration Date</label>
                   <select name = "month">
@@ -190,15 +219,11 @@
               <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
               <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
               <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
-              <input type = "hidden" name = "IPADDRESS" value = "10.248.136.24" />
               <input type = "hidden" name = 'PAYMENTACTION' value = "Sale" />
               <input type = "hidden" name = "AMT" value = "20.00" />
               <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
-              <input type = "hidden" name = "STREET" value = "123 main" />
-              <input type = "hidden" name = "CITY" value = "omaha" />
-              <input type = "hidden" name = "STATE" value = "NE" />
-              <input type = "hidden" name = "Zip" value = "68144" />
               <input type = "hidden" name = "COUNTRYCODE" value = "US" />
+              <input type = "hidden" name = "VERSION" value = "58.0" />
               <div class="form-group" id="pay-now">
                   <button type="submit" class="btn btn-default" name = "METHOD" value = "DoDirectPayment" id="confirm-purchase">Confirm</button>
               </div>
@@ -209,8 +234,6 @@
 
     </div>
   </div>
-
-
 
 
 </div>

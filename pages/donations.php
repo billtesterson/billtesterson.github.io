@@ -36,6 +36,8 @@
   <h1>Link Donation</h1>
   <a href = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7H8PNU96S4WGE">SHIRT</a>
 </div>
+
+https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P7GMK3U3Z27WL
   <script src = "../jquery-3.2.1.min(1).js"></script>
   <script src = "../script.js"></script>
 </body>

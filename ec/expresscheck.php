@@ -49,6 +49,7 @@
     <div class = "col-md-4">
       <h1>SetExpressCheckout</h1>
       <form method = 'post' action = "setec.php">
+        <input tp
         <input type = "hidden" name = "METHOD" value = "SetExpressCheckout" />
         <input type = "hidden" name = "URL" value = "https://api-3t.sandbox.paypal.com/nvp" />
         <input type = "hidden" name = "PAYMENTREQUEST_0_AMT" value = "104.86" />
@@ -58,6 +59,10 @@
         <input type = "hidden" name = "SOLUTIONTYPE" value = "SOLE" />
         <input type = "submit" />
       </form>
+    </div>
+
+    <div class = "col-md-4">
+      <a href = "../ec/"><h1>SDK</h1></a>
     </div>
   </div>
   </div>

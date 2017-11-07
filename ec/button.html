@@ -1,60 +1,102 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9 " lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
-  <link rel = "stylesheet" href = "../css/bootstrap.min.css" />
-  <link rel = "stylesheet" href = "../style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>
+
 <body>
-  <script>
-  $(function(){
-    $('#header').load('../nav.html');
-  });
-  </script>
-  <div id = "header"></div>
-  <a href = "expresscheck.php">back to ec</a>
-  <div class = "container">
-    <div id = "paypal-button"></div>
+    <div id="paypal-button-container"></div>
 
+    <div id = "confirm" class = "hidden">
+      <div>
+        Ship to:
+      </div>
+      <div>
+        <span id = "recipient"></span>, <span id = "line1"></span>, <span id = "city"></span>
+      </div>
+      <div>
+        <span id = "state"></span>, <span id = "zip"></span>, <span id = "country"></span>
+      </div>
+      <button id = "confirmButton">Complete Payment</button>
+    </div>
+
+    <div id = "thanks" class = "hidden">
+      Thanks, <span id = "thanksname"></span>!
+    </div>
     <script>
-paypal.Button.render({
+        paypal.Button.render({
 
-        env: 'sandbox',
-        commit: true,
-        client: {
-          sandbox: 'AY62ZWBbP1aM9iYBN9pviUKXQkSNNvAqn-dNrGtcGdiBGYlYbzmvtZcXzFqoXBkZnf8KxJ-J8JveZ3sy' //business2
-        }
-        payment: function(data, actions) {
-          return actions.payment.create({
-            payment: {
-              transactions: [
-                {
-                  amount: {total: '104.86', currency: 'USD'}
-                }
-              ]
-            }
-          });
-        },
+            env: 'sandbox', // sandbox | production
 
-        onAuthorize: function(data, actions) {
-          return actions
-                  .payment
-                  .execute()
-                  .then(function() {
-                    window.alert('Payment Complete!');
+            // PayPal Client IDs - replace with your own
+            // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+            client: {
+                sandbox:    'AY62ZWBbP1aM9iYBN9pviUKXQkSNNvAqn-dNrGtcGdiBGYlYbzmvtZcXzFqoXBkZnf8KxJ-J8JveZ3sy'
+            },
+
+            // Show the buyer a 'Pay Now' button in the checkout flow
+            commit: true,
+
+            // payment() is called when the button is clicked
+            payment: function(data, actions) {
+
+                // Make a call to the REST api to create the payment
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                amount: { total: '0.01', currency: 'USD' }
+                            }
+                        ]
+                    }
+                });
+            },
+
+            // onAuthorize() is called when the buyer approves the payment
+            onAuthorize: function(data, actions) {
+                //get payment details
+                return actions.payment.get().then(function(data) {
+                  //display payment details and a confirmation button
+                  var shipping = data.payer.payer_info.shipping_address;
+
+                  document.querySelector('#recipient').innerText = shipping.recipient_name;
+                  document.querySelector('#lin1').innerText = shipping.line1;
+                  document.querySelector('#city').innerText = shipping.city;
+                  document.querySelector('#state').innerText = shipping.state;
+                  document.querySelector('#zip').innerText = shipping.zip;
+                  document.querySelector('#country').innerText = shipping.country_code;
+
+                  document.querySelector('#paypal-button-container').style.display = 'none';
+                  document.querySelector('#confirm').style.display = 'block';
+
+                  //listen for click on confirm button
+                  document.querySelector('#confirmButton').addEventListener('click', function() {
+                    //disable button and show loading message
+                    document.querySelector('#confirm').innerText = 'Loading...';
+                    document.querySelector('#confirm').disabled = true;
+
+                    //execute the payment
+
+                    return actions.payment.execute().then(function() {
+                      if(error === 'INSTRUMENT_DECLINED') {
+                        actions.restart();
+                      }
+                      //show a thank you note
+                      document.querySelector('#thanksname').innerText = shipping.recipient_name;
+
+                      document.querySelector('#confirm').style.display = 'none';
+                      document.querySelector('#thanks').style.display = 'block';
+                    });
                   });
-        }
-      }, '#paypal-button');
+                });
+
+            }
+
+        }, '#paypal-button-container');
+
     </script>
-
-
-
-  <script src = "../script.js"></script>
-  </body>
-  </html>
+</body>
+<!--AY62ZWBbP1aM9iYBN9pviUKXQkSNNvAqn-dNrGtcGdiBGYlYbzmvtZcXzFqoXBkZnf8KxJ-J8JveZ3sy-->

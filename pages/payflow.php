@@ -268,6 +268,9 @@ $id = rand();
     </form>
   </div>
 
+<div class = "col-md-4">
+  <a href = "payflowec.php"><h1>EC</h1></a>
+</div>
 </div>
 
 

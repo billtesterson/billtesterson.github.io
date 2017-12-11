@@ -2,7 +2,7 @@
 $url = $_REQUEST['url'];
 
 $headers[] = "Content-Type: application/json";
-$headers[] = "Authorization: Bearer A21AAEcgqxes76DtXw3ufIzv-yNXvxTjc756FjKTF2EP5UpVD4s1JaLJW_s3V8m9FRSe2F5RzxfBZLeXG7vTaQlh1FJZVU0pg";
+$headers[] = "Authorization: Bearer A21AAF6mXhLppCq2u-x0Xrghl6TQJqx1tpqvoeBZz70eCSpqXKUSWWKg4HrlptHSqSSH45pteE4k0SP3XrZHLMATrpjmfNVFg";
 
 $ch = curl_init();
 
@@ -25,15 +25,15 @@ $request = '{
   "transactions": [
   {
     "amount": {
-    "total": "30.11",
+    "total": "15.00",
     "currency": "USD",
     "details": {
-      "subtotal": "30.00",
-      "tax": "0.07",
-      "shipping": "0.03",
-      "handling_fee": "1.00",
-      "shipping_discount": "-1.00",
-      "insurance": "0.01"
+      "subtotal": "15.00",
+      "tax": "0.00",
+      "shipping": "0.00",
+      "handling_fee": "0.00",
+      "shipping_discount": "0.00",
+      "insurance": "0.00"
     }
     },
     "description": "The payment transaction description.",
@@ -50,36 +50,26 @@ $request = '{
       "description": "Brown hat.",
       "quantity": "5",
       "price": "3",
-      "tax": "0.01",
+      "tax": "0.00",
       "sku": "1",
-      "currency": "USD"
-      },
-      {
-      "name": "handbag",
-      "description": "Black handbag.",
-      "quantity": "1",
-      "price": "15",
-      "tax": "0.02",
-      "sku": "product34",
       "currency": "USD"
       }
     ],
     "shipping_address": {
-      "recipient_name": "Brian Robinson",
-      "line1": "4th Floor",
-      "line2": "Unit #34",
-      "city": "San Jose",
+      "recipient_name": "testy test",
+      "line1": "123 main st",
+      "city": "Omaha",
       "country_code": "US",
-      "postal_code": "95131",
+      "postal_code": "68144",
       "phone": "011862212345678",
-      "state": "CA"
+      "state": "NE"
     }
     }
   }
   ],
   "note_to_payer": "Contact us for any questions on your order.",
   "redirect_urls": {
-  "return_url": "https://www.paypal.com/return",
+  "return_url": "https://127.0.0.1",
   "cancel_url": "https://www.paypal.com/cancel"
   }
 }';
@@ -110,13 +100,20 @@ $response = curl_exec($ch);
   <div id = "header"></div>
 
 <?php
-echo "Request: $request <br /><br />";
 
-echo "Response: $response";
+$result = json_decode($response, true);
+
+var_dump($result);
 
 
 ?>
 
+<form method = "post" action = '<?php echo $result['links'][1]['href'];?>'>
+  <input type = 'submit' />
+</form>
+<script>
+
+</script>
   <script src = "../script.js"></script>
   </body>
   </html>

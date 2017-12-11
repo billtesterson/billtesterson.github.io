@@ -98,6 +98,10 @@
       <div class = "col-md-4">
         <a href = "rest/rest1.php"><h1>REST</h1></a>
       </div>
+
+      <div class = "col-md-4">
+        <a href = "adaptive/adaptive1.php"><h1>Adaptive Payments</h1></a>
+      </div>
     </div>
 
 

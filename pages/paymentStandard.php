@@ -24,6 +24,7 @@
   <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="C4CH9J8A3JGHQ">
+<input type = "hidden" name = "landing_page" value = "BILLING" />
 <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
@@ -85,8 +86,65 @@
 <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+<h1>Add to Cart Test</h1>
+<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="EAXCCCN965D6S">
+<table>
+<tr><td><input type="hidden" name="on0" value="list">list</td></tr><tr><td><select name="os0">
+	<option value="Option 1">Option 1 $1.00 USD</option>
+	<option value="Option 2">Option 2 $2.00 USD</option>
+	<option value="Option 3">Option 3 $3.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
 
+<h1>GB add to cart</h1>
+<?php
+$str = "Art Course Payments - choose an option from the drop down box below";
+echo $str . "<br />";
+echo strlen($str);
+ ?>
+<br />
+<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="wpittmanGB@paypal.com">
+<input type="hidden" name="lc" value="GB">
+<input type="hidden" name="item_name" value="art">
+<input type="hidden" name="button_subtype" value="products">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="cn" value="Add special instructions to the seller:">
+<input type="hidden" name="no_shipping" value="2">
+<input type="hidden" name="currency_code" value="GBP">
+<input type="hidden" name="add" value="1">
+<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHosted">
+<table>
+<tr><td><input type="hidden" name="on0" value="Art Course Payments - choose an option from the drop down box below">Art Course Payments - choose an option from the drop down box below</td></tr><tr><td><select name="os0">
+	<option value="Deposit weekend art course">Deposit weekend art course £95.00 GBP</option>
+	<option value="Balance weekend art course">Balance weekend art course £100.00 GBP</option>
+	<option value="Payment in Full weekend art course">Payment in Full weekend art course £195.00 GBP</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="GBP">
+<input type="hidden" name="option_select0" value="Deposit weekend art course">
+<input type="hidden" name="option_amount0" value="95.00">
+<input type="hidden" name="option_select1" value="Balance weekend art course">
+<input type="hidden" name="option_amount1" value="100.00">
+<input type="hidden" name="option_select2" value="Payment in Full weekend art course">
+<input type="hidden" name="option_amount2" value="195.00">
+<input type="hidden" name="option_index" value="0">
+<input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
 
+<ul id = "list">
+  <li>
+
+  </li>
+</ul>
 
 </div>
 <script src = "../jquery-3.2.1.min(1).js"></script>

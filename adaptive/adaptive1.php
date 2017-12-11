@@ -1,6 +1,3 @@
-<?php
-require("token.php");
- ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -19,15 +16,13 @@ require("token.php");
   });
   </script>
   <div id = "header"></div>
-
-<form method = "post" action = "rest2.php">
-  <input type = "hidden" name = "url" value = "https://api.sandbox.paypal.com/v1/payments/payment" />
-  <input type = "submit"  />
-</form>
-
-<?php
-echo $response;
-?>
-  <script src = "../script.js"></script>
+<div class = "container">
+    <h1>Adaptive Payments</h1>
+    <form method = "post" action = "adaptive2.php">
+      <input type = "text" name = "actionType" placeholder = "PAY, CREATE, OR PAY_PRIMARY" />
+      <input type = "submit" />
+    </form>
+</div>
+<script src = "../script.js"></script>
   </body>
   </html>

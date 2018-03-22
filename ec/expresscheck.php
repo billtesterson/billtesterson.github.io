@@ -59,6 +59,9 @@
     <div class = "col-md-4">
       <a href = "billagree.php"><h1>Billing Agreement</h1></a>
     </div>
+    <div class = "col-md-4">
+      <a href = "https://rest-wpittman.c9users.io/"><h1>Other Integrations</h1></a>
+    </div>
   </div>
   </div>
 

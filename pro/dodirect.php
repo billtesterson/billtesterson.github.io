@@ -73,7 +73,12 @@ $response = curl_exec($ch);
   <div id = "header"></div>
 <div class = "container">
 <p>
-  <?php echo $response; ?>
+  <?php
+  $response = explode("&", $response);
+  foreach($response as $data) {
+    echo $data . "<br />";
+  }
+   ?>
 </p>
 
 <div class = "row">

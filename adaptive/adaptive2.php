@@ -6,6 +6,7 @@
  $headers[] = "X-PAYPAL-REQUEST-DATA-FORMAT: NV";
  $headers[] = "X-PAYPAL-RESPONSE-DATA-FORMAT: NV";
  $headers[] = "X-PAYPAL-APPLICATION-ID: APP-80W284485P519543T";
+ $headers[] = "X-PAYPAL-SANDBOX-EMAIL-ADDRESS: wpittman@paypal.com";
 
 $url = "https://svcs.sandbox.paypal.com/AdaptivePayments/Pay";
 $ch = curl_init();

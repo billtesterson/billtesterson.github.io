@@ -77,6 +77,8 @@
     </div>
   </div>
 
+
+
   <div class = "row">
     <div class = "col-md-4">
       <h1>AVS Fail</h1>
@@ -228,6 +230,33 @@
         <input type = "hidden" name = "ORIGID" value = "A10AA7215505" />
         <input type = "hidden" name = "UPDATEACTION" value = "FPS_MERCHANT_DECLINE" />
         <input type = "submit" value = "decline" />
+      </form>
+    </div>
+  </div>
+
+  <div class = "row">
+    <div class = "col-md-4">
+      <h1>USPS address validation</h1>
+      <form method = "POST" action = "fps2.php">
+        <input type = "hidden" name = "VENDOR" value = "wpittmanpro4"/>
+        <input type = "hidden" name = "USER" value = "wpittmanpro4" />
+        <input type = "hidden" name = "PWD" value = "Element7430" />
+        <input type = "hidden" name = "PARTNER" value="paypal">
+        <input type = "hidden" name = "TRXTYPE" value = "S" />
+        <input type = "hidden" name = "TENDER" value = "C" />
+        <input type = "hidden" name = "AMT" value = "10.00" />
+        <input type = "text" name = "BILLTOFIRSTNAME" placeholder = "BILLTOFIRSTNAME" />
+        <input type = "text" name = "BILLTOLASTNAME" placeholder="BILLTOLASTNAME" />
+        <input type = "text" name = "BILLTOSTREET" placeholder = "BILLTOSTREET" />
+        <input type = "text" name = "BILLTOCITY" placeholder = "BILLTOCITY" />
+        <input type = "text" name = "BILLTOSTATE" placeholder = "BILLTOSTATE" />
+        <input type = "text" name = "BILLTOZIP" placeholder = "BILLTOZIP" />
+        <input type = "text" name = "BILLTOCOUNTRY" placeholder = "BILLTOCOUNTRY" />
+        <input type = "hidden" name = "ECHODATA" value = "address" />
+        <input type = "text" name = "ACCT" placeholder = "ACCT" />
+        <input type = "text" name = "EXPDATE" placeholder = "EXPDATE MMYY" />
+        <input type = "text" name = "CVV2" placeholder = "CVV2" />
+        <input type = "submit" />
       </form>
     </div>
   </div>

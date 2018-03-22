@@ -15,6 +15,10 @@
     $('#header').load('../nav.html');
   });
   </script>
+  <?php
+  error_reporting(E_ALL);
+ini_set('display_errors', '1');
+   ?>
   <div id = "header"></div>
 <div class = "container">
   <div class = "row">
@@ -111,9 +115,9 @@
                     </option>
                 </select>
               </div>
-              <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
-              <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
-              <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
+              <input type = "hidden" name = "USER" value = "wpittman_api1.paypal.com" />
+              <input type = "hidden" name = "PWD" value = "C7CM265TPAMF2LM7"  />
+              <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AART2vD.JQ4wJAUVJrAyxLH3IrN3" />
               <input type = "hidden" name = 'PAYMENTACTION' value = "Authorization" />
               <input type = "hidden" name = "AMT" value = "20.00" />
               <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
@@ -216,9 +220,9 @@
                     </option>
                 </select>
               </div>
-              <input type = "hidden" name = "USER" value = "wpittmanBusiness1_api1.paypal.com" />
-              <input type = "hidden" name = "PWD" value = "Q4MJKLB5BK7FHPNY"  />
-              <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AadoqWmrIeK2Kws1Upn1JMc5P6pz" />
+              <input type = "hidden" name = "USER" value = "wpittman_api1.paypal.com" />
+              <input type = "hidden" name = "PWD" value = "C7CM265TPAMF2LM7"  />
+              <input type = "hidden" name = "SIGNATURE" value = "AFcWxV21C7fd0v3bYYYRCpSSRl31AART2vD.JQ4wJAUVJrAyxLH3IrN3" />
               <input type = "hidden" name = 'PAYMENTACTION' value = "Sale" />
               <input type = "hidden" name = "AMT" value = "20.00" />
               <input type = "hidden" name = "CURRENCYCODE" value = "USD" />
@@ -234,6 +238,60 @@
 
     </div>
   </div>
+
+  <div class = "row">
+    <div class = "col-md-4 col-md-offset-4">
+      <h1>Payflow Sale</h1>
+      <form method = "post" action = "pfsale.php">
+        <input type = "hidden" name = "URL" value = "https://pilot-payflowpro.paypal.com" />
+        <input type="hidden" name="VENDOR" value="wpittmanpro"/>
+        <input type="hidden" name="USER" value="wpittmanpro" />
+        <input type ="hidden" name ="PWD" value = "Element7430" />
+        <input type="hidden" name="PARTNER" value="paypal">
+        <input type = "hidden" name = "VERBOSITY" value = "HIGH" />
+        <input type = "hidden" name = "AMT" value = "10" />
+        <div class = "form-group">
+          <label for = "BILLTOFIRSTNAME">F Name</label>
+          <input type = "text" name = "BILLTOFIRSTNAME" value = "" />
+        </div>
+        <div class = "form-group">
+          <label for = "BILLTOLASTNAME">L Name</label>
+          <input type = "text" name = "BILLTOLASTNAME" value = "" />
+        </div>
+        <div class = "form-group">
+          <label for = "BILLTOSTREET">Street</label>
+          <input type = "text" name = "BILLTOSTREET" value = "" />
+        </div>
+        <div class = "form-group">
+          <label for = "BILLTOCITY">City</label>
+          <input type = "text" name = "BILLTOCITY" value = "" />
+        </div>
+        <div class = "form-group">
+          <label for = "BILLTOSTATE">State</label>
+          <input type = "text" name = "BILLTOSTATE" value = "" />
+        </div>
+        <div class = "form-group">
+          <label for = "BILLTOZIP">ZIP</label>
+          <input type = "text" name = "BILLTOZIP" value = "" />
+        </div>
+        <div class = "form-group">
+          <label for = "ACCT">ACCT</label>
+          <input type = "text" name = "ACCT" value = "4929938406392531" />
+        </div>
+        <div class = "form-group">
+          <label for = "CVV2">CVV2</label>
+          <input type = "text" name = "CVV2" value = "123" />
+        </div>
+        <div class = "form-group">
+          <label for = "EXPDATE">EXPDATE</label>
+          <input type = "text" name = "EXPDATE" value = "0920" />
+        </div>
+        <input type = "submit" />
+      </form>
+    </div>
+  </div>
+
+
 
 
 </div>

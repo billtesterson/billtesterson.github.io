@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <script>
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'jsonData.json');
+xhr.onload = function() {
+  if(xhr.status === 200) {
+    var data = JSON.parse(xhr.responseText);
+    console.log(data[0].name + " is " + data[1].name + "'s Sexy Mom!");
+    alert(data[1].name + " is " + data[1].age + " years old!");
+  } else {
+    alert("Request failed");
+  }
+};
+xhr.send();
+
+  </script>
+  <script>
+if(navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, fail);
+  var text = document.getElementById("text");
+  text.textContent = 'Checking location...';
+} else {
+  text.textContent = "Sorry";
+}
+function success(position) {
+  alert("Long=" + position.coords.longitude);
+}
+
+function fail() {
+  alert("Fail");
+}
+  </script>
+  <h1>Hello</h1>
+  <p id = "text">
+
+  </p>
+<button type = "button" id = "btn">Click me</button>
+
+
+</body>
+</html>

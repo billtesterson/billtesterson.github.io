@@ -8,7 +8,7 @@ $payKey = $_REQUEST['payKey'];
  $headers[] = "X-PAYPAL-APPLICATION-ID: APP-80W284485P519543T";
  $headers[] = "X-PAYPAL-SANDBOX-EMAIL-ADDRESS: wpittman@paypal.com";
 
-$url = "https://svcs.sandbox.paypal.com/AdaptivePayments/Pay";
+$url = "https://svcs.sandbox.paypal.com/AdaptivePayments/ExecutePayment";
 $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -22,9 +22,11 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 90);
 curl_setopt($ch, CURLOPT_POST, 1);
 
-$request = "requestEnvelope.errorLanguage=en_US&payKey=$payKey&fundingPlanId=12345&actionType=CREATE&senderEmail=wpittman@paypal.com&cancelUrl=https://rest-wpittman.c9users.io/adaptive/cancel.php
+$request = "requestEnvelope.errorLanguage=en_US&payKey=$payKey";
+
+/*&fundingPlanId=12345&senderEmail=wpittman@paypal.com&cancelUrl=https://rest-wpittman.c9users.io/adaptive/cancel.php
 &currencyCode=USD&receiverList.receiver(0).email=wpittmanBusiness1@paypal.com&receiverList.receiver(0).amount=100.00
-&returnUrl=https://rest-wpittman.c9users.io/adaptive/redirect.php";
+&returnUrl=https://rest-wpittman.c9users.io/adaptive/redirect.php";*/
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 

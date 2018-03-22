@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+  <!--API KEY 1d28dae524d351774ce0659fb7e04697-->
+  <h1>THe weather</h1>
+  <p>
+<span id = "text"></span>
+  </p>
+  <table>
+    <tr>
+      <td>
+        Longitude:
+      </td>
+      <td id = 'long'>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Latitude:
+      </td>
+      <td id = 'lat'>
+
+      </td>
+    </tr>
+  </table>
+  <script>
+
+    var coordsObject = {};
+if(navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, fail);
+    document.getElementById("text").innerHTML = "Checking....";
+     } else {
+    document.getElementById("text").innerHTML = "Sorry, no browser support";
+  }
+  function success(position) {
+   position.coords.longitude = coordsObject.long;
+   position.coords.latitude = coordsObject.lat;
+    document.getElementById("long").innerHTML = position.coords.longitude;
+    document.getElementById("lat").innerHTML = position.coords.latitude;
+    
+    console.log("YES!");
+  }
+  function fail() {
+    alert("FAIL!");
+  }
+
+  </script>
+</body>
+</html>

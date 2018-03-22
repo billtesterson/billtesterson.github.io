@@ -53,7 +53,7 @@ $id = rand();
   <input type ="hidden" name ="PWD" value = "Element7430" />
   <input type="hidden" name="PARTNER" value="paypal">
   <input type="hidden" name="AMT" value="10">
-  <input type = "hidden" name = "TENDER" value = "C" />
+  <input type = "hidden" name = "TENDER" value = "P" />
   <input type="hidden" name="TRXTYPE" value="S">
   <!-- See “Payflow Link Transaction Types” on page63for the list of valid transaction types. -->
   <!-- The following fields are optional you can choose these or others: -->
@@ -77,10 +77,10 @@ $id = rand();
       <input type="hidden" name="USER" value="wpittmanpro" />
       <input type="hidden" name="PWD" value="Element7430" />
       <input type="hidden" name="PARTNER" value="paypal" />
-      <input type="hidden" name='AMT' value="80" />
+      <input type="hidden" name='AMT' value="10" />
       <input type="hidden" name="TRXTYPE" value="D" />
-      <input type="hidden" name="ORIGID" value="A10AA71ABB7B" />
-      <input type="hidden" name="CAPTURECOMPLETE" value="N"
+      <input type="hidden" name="ORIGID" value="A10AA91EA797" />
+      <input type="hidden" name="CAPTURECOMPLETE" value="Y"
       <input type="hidden" name="VERBOSITY" value="HIGH" />
       <input type="submit" value="Delayed Capture" />
     </form>
@@ -187,14 +187,15 @@ $id = rand();
 <div class = "row">
   <div class = "col-md-4">
     <h1>Inquiry Trans</h1>
-    <form method="POST" action="https://pilot-payflowpro.paypal.com">
+    <form method="POST" action="inquiry.php">
       <input type="hidden" name="VENDOR" value="wpittmanpro" />
       <input type="hidden" name="USER" value="wpittmanpro" />
       <input type="hidden" name="PWD" value="Element7430" />
       <input type="hidden" name="PARTNER" value="paypal" />
       <input type="hidden" name="TRXTYPE" value ="I" />
       <input type="hidden" name="TENDER" value="C" />
-      <input type="hidden" name="ORIGID" value="A70AA582B9AE"  />
+      <input type="text" name="ORIGID" value="A70AA76D076C"  />
+      <input type="hidden" name="VERBOSITY" value = "HIGH" />
       <input type="submit" value="Inquire" />
     </form>
   </div>
@@ -270,6 +271,10 @@ $id = rand();
 
 <div class = "col-md-4">
   <a href = "payflowec.php"><h1>EC</h1></a>
+</div>
+
+<div class = "col-md-4">
+  <a href = "recurringBilling.php"><h1>Recurring Billing Profile</h1></a>
 </div>
 </div>
 

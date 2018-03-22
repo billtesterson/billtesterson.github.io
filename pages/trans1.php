@@ -9,9 +9,13 @@ $partner = $_REQUEST['PARTNER'];
 $pwd = $_REQUEST['PWD'];
 $amt = $_REQUEST['AMT'];
 $trxtype = $_REQUEST['TRXTYPE'];
+$tender = $_REQUEST['TENDER'];
 $token = $_REQUEST['CREATESECURETOKEN'];
 $tokenid = $_REQUEST['SECURETOKENID'];
 $silent = $_REQUEST['SILENTTRAN'];
+$mode = $_REQUEST['MODE'];
+$street = $_REQUEST['BILLTOSTREET'];
+$zip = $_REQUEST['BILLTOZIP'];
 
 $headers[] = "Content-Type: text/namevalue";
 // Set the server timeout value to 45, but notice below in the cURL section, the timeout
@@ -33,11 +37,14 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 90);
 curl_setopt($ch, CURLOPT_POST, 1);
 
-$token_request = "VENDOR=$vendor&USER=$user&PWD=$pwd&PARTNER=$partner&AMT=$amt&TRXTYPE=$trxtype&CREATESECURETOKEN=$token&SECURETOKENID=$tokenid&SILENTTRAN=$silent";
+$token_request = "VENDOR=$vendor&USER=$user&PWD=$pwd&PARTNER=$partner&AMT=$amt&TRXTYPE=$trxtype&TENDER=$tender&CREATESECURETOKEN=$token&SECURETOKENID=$tokenid&SILENTTRAN=$silent&MODE=$mode&BILLTOSTREET=$street&BILLTOZIP=$zip";
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, $token_request);
 
 $token_response = curl_exec($ch);
+parse_str($token_response, $data);
+$token = $data['SECURETOKEN'];
+$token_id = $data['SECURETOKENID'];
 
 ?>
 
@@ -72,9 +79,12 @@ $token_response = curl_exec($ch);
 
     <br />
     <form method="post" action="https://pilot-payflowlink.paypal.com">
-     <input type="text" name="SECURETOKEN"/><br />
-     <input type="text" name="SECURETOKENID"/>
-     <input type="hidden" name="PARMLIST" value="ACCT=4111111111111111&EXPDATE=0725&CSC=123&TENDER=C" />
+     <input type="text" name="SECURETOKEN" value = "<?php echo $token;?>"/><br />
+     <input type="text" name="SECURETOKENID" value = "<?php echo $token_id;?>"/><br />
+     <input type="text" name = "ACCT" value ="5555555555554444" /><br />
+     <input type="text" name = "EXPDATE" value = "0920" /><br />
+     <input type="text" name = "CSC" value = "123" /><br />
+     <!--<input type="hidden" name="PARMLIST" value="ACCT=4111111111111111&EXPDATE=0725&CSC=123" />-->
      <input type = "submit" value = "submit" />
      </form>
   </div>

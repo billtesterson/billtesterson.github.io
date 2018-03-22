@@ -2,17 +2,18 @@
 
 $today = date("YmdHis");
 
-$url = $_REQUEST['URL'];
-$tokenid = $_REQUEST['SECURETOKENID'];
-$vendor = $_REQUEST['VENDOR'];
+$url = "https://api-3t.sandbox.paypal.com/nvp";
 $user = $_REQUEST['USER'];
-$partner = $_REQUEST['PARTNER'];
 $pwd = $_REQUEST['PWD'];
-$amt = $_REQUEST['AMT'];
-$trxtype = $_REQUEST['TRXTYPE'];
-$token = $_REQUEST['CREATESECURETOKEN'];
-
-
+$sig = $_REQUEST['SIGNATURE'];
+$version = $_REQUEST['VERSION'];
+$method = $_REQUEST['METHOD'];
+$receiver = $_REQUEST['RECEIVERTYPE'];
+$phone = $_REQUEST['L_RECEIVERPHONE0'];
+$amt = $_REQUEST['L_AMT0'];
+//$phone2 = $_REQUEST['L_RECEIVERPHONE1'];
+//$amt2 = $_REQUEST['L_AMT1'];
+$currency = $_REQUEST['CURRENCYCODE'];
 
 $headers[] = "Content-Type: text/namevalue";
 // Set the server timeout value to 45, but notice below in the cURL section, the timeout
@@ -21,27 +22,29 @@ $headers[] = "X-VPS-CLIENT-TIMEOUT: 45";
 $headers[] = "X-VPS-REQUEST-ID:" . $today;
 $headers[] = "PAYPAL-NVP:";
 
-
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_VERBOSE, 1);
 
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 90);
 curl_setopt($ch, CURLOPT_POST, 1);
+//L_RECEIVERPHONE1=$phone2&L_AMT1=$amt2&
+$request = "USER=$user&PWD=$pwd&SIGNATURE=$sig&VERSION=$version&METHOD=$method&RECEIVERTYPE=$receiver&L_RECEIVERPHONE0=$phone&L_AMT0=$amt&CURRENCYCODE=$currency";
+$req = explode("&", $request);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 
-$token_request = "VENDOR=$vendor&USER=$user&PWD=$pwd&PARTNER=$partner&AMT=$amt&TRXTYPE=$trxtype&CREATESECURETOKEN=$token&SECURETOKENID=$tokenid";
+$response = curl_exec($ch);
 
-curl_setopt($ch, CURLOPT_POSTFIELDS, $token_request);
+$response = explode("&", $response);
 
-$token_response = curl_exec($ch);
+
 
 ?>
-
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -60,34 +63,24 @@ $token_response = curl_exec($ch);
   });
   </script>
   <div id = "header"></div>
-  <div class = "container">
+<div class = "container">
 
-
-<?php echo "Request: $token_request";?>
-<br />
-<br />
-<?php echo "Response: $token_response"; ?>
-
-<?php
-
-$token_ar = explode('&', $token_response);
-
-
-$token_id = $token_ar[2];
-$token1 = explode('=', $token_id);
+  <?php
+    echo "REQUEST: <br />";
+    foreach($req as $input) {
+      echo $input . "<br />";
+    }
+    echo "<br />RESPONSE:<br />";
+    foreach($response as $data) {
+      echo $data . "<br />";
+    }
 
 
 
-echo "<iframe src = 'https://pilot-payflowlink.paypal.com?SECURETOKEN=$token1[1]&SECURETOKENID=$tokenid&MODE=TEST' width='490px' height='565px' border='0'
-  frameborder='0' scrolling='no' allowtransparency='true'></iframe>";
-
-?>
-
-
-
-
+  ?>
 </div>
-  <script src = "../jquery-3.2.1.min(1).js"></script>
+
+
   <script src = "../script.js"></script>
   </body>
   </html>

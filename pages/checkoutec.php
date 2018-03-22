@@ -2,7 +2,7 @@
 
 $today = date("YmdHis");
 
-$url = $_REQUEST['URL'];
+$url = "https://pilot-payflowpro.paypal.com";
 $vendor = $_REQUEST['VENDOR'];
 $user = $_REQUEST['USER'];
 $partner = $_REQUEST['PARTNER'];
@@ -23,7 +23,7 @@ $headers[] = "PAYPAL-NVP";
 
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, $URL)
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_VERBOSE, 1);
 

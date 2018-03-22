@@ -40,10 +40,14 @@
           <input type="hidden" name="PWD" value="Element7430" />
           <input type="hidden" name="PARTNER" value="paypal" />
           <input type = "hidden" name = "TRXTYPE" value = "S" />
+          <input type = "hidden" name = "TENDER" value = "C" />
           <input type = "hidden" name = "AMT" value = "200" />
           <input type = "hidden" name = "CREATESECURETOKEN" value = "Y" />
           <input type = "hidden" name = "SECURETOKENID" value = "<?php echo $id;?>" />
           <input type = "hidden" name = "SILENTTRAN" value = "TRUE" />
+          <input type = "hidden" name = "MODE" value = "TEST" />
+          <input type = "text" name = "BILLTOSTREET" placeholder="street" />
+          <input type = "text" name = "BILLTOZIP" placeholder = "zip" />
           <input type = "submit" value = "submit" />
         </form>
       </div>

@@ -42,11 +42,11 @@
           <input type = "hidden" name = "ACCT" value = "4111111111111111" />
           <input type = "hidden" name = "EXPDATE" value = "0920" />
           <input type = "hidden" name = "AMT" value = "100.00" />
-          <input type = "hidden" name = "START" value = "10062017" />
+          <input type = "hidden" name = "START" value = "02252018" />
           <input type = "hidden" name = "TERM" value = "365" />
           <input type = "hidden" name = "PAYPERIOD" value = "DAYS" />
-          <input type = "hidden" name = "OPTIONALTRX" value = "S" /> <!--optional-->
-          <input type = "hidden" name = "OPTIONALTRXAMT" value = "10.00" /><!--optional-->
+        <!--  <input type = "hidden" name = "OPTIONALTRX" value = "S" />--> <!--optional-->
+        <!--  <input type = "hidden" name = "OPTIONALTRXAMT" value = "10.00" />--><!--optional-->
           <input type = "submit" value = "Add RB" />
         </form>
       </div>
@@ -61,7 +61,7 @@
           <input type = "hidden" name = "TRXTYPE" value = "R"/>
           <input type = "hidden" name = "TENDER" value = "C" />
           <input type = "hidden" name = "ACTION" value = "M" />
-          <input type = "hidden" name = "ORIGPROFILEID" value = "RT0000000004" />
+          <input type = "hidden" name = "ORIGPROFILEID" value = "RT0000000007" />
           <input type = "hidden" name = "AMT" value = "15.00" /> <!--anything to modify this line and below-->
           <input type = "submit" value = "Modify RB" />
         </form>
@@ -76,7 +76,7 @@
           <input type = "hidden" name = "PARTNER" value="paypal" />
           <input type = "hidden" name = "TRXTYPE" value = "R"/>
           <input type = "hidden" name = "ACTION" value = "I" />
-          <input type = "hidden" name = "ORIGPROFILEID" value = "RT0000000005" />
+          <input type = "hidden" name = "ORIGPROFILEID" value = "RT0000000007" />
           <input type = "hidden" name = "PAYMENTHISTORY" value = "N" />
           <input type = "submit" value = "PAYMENTHISTORY=N" />
         </form>
@@ -113,7 +113,24 @@
         </form>
       </div>
 
-
+      <div class = "col-md-4">
+        <h1>Convert transaction</h1>
+        <form method="POST" action = "https://pilot-payflowpro.paypal.com">
+          <input type = "hidden" name = "VENDOR" value="wpittmanpro" />
+          <input type = "hidden" name = "USER" value="wpittmanpro" />
+          <input type = "hidden" name = "PWD" value="Element7430" />
+          <input type = "hidden" name = "PARTNER" value="paypal" />
+          <input type = "hidden" name = "TRXTYPE" value = "R"/>
+          <input type = "hidden" name = "ACTION" value = "A" />
+          <input type = "hidden" name = "TENDER" value = "C"  />
+          <input type = "hidden" name = "ORIGID" value = "A71AA827B4E6" />
+          <input type = "hidden" name = "START" value = "02252018" />
+          <input type = "hidden" name = "TERM" value = "365" />
+          <input type = "hidden" name = "PAYPERIOD" value = "DAYS" />
+          <input type = "text" name = "PROFILENAME"/>
+          <input type = "submit" />
+        </form>
+      </div>
 
     </div>
 

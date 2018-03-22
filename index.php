@@ -86,7 +86,7 @@
       </div>
 
       <div class = "col-sm-4">
-        <a href = "pages/paymentStandard.php">Payment Standard</a>
+        <a href = "pages/paymentStandard.php"><h1>Payment Standard</h1></a>
       </div>
 
       <div class = "col-sm-4">

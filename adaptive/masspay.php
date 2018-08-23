@@ -80,6 +80,8 @@ parse_str($response);
 
 
   ?>
+  <br /><br /><br />
+  <a href = "adaptive1.php"><h3>back</h3></a>
 </div>
 
 

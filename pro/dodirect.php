@@ -43,10 +43,18 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 90);
 curl_setopt($ch, CURLOPT_POST, 1);
 
+$str = file_get_contents('text.txt');
+$str = preg_replace('/\s+/', '', $str);
+$str = substr($str, 0, -1);
+
+
+
 $request = "USER=$user&PWD=$pwd&SIGNATURE=$signature&VERSION=$version&PAYMENTACTION=$payment_action&
 CREDITCARDTYPE=$card_type&IPADDRESS=$ip&ACCT=$acct&EXPDATE=$exp_date&CVV2=$cvv2&AMT=$amt&
 CURRENCYCODE=$currency_code&FIRSTNAME=$fname&LASTNAME=$lname&STREET=$street&CITY=$city&STATE=$state&
 Zip=$zip&COUNTRYCODE=$country_code&METHOD=$method";
+
+
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, $request);
 
@@ -74,10 +82,16 @@ $response = curl_exec($ch);
 <div class = "container">
 <p>
   <?php
+  echo $request + "<br /><br /><br />";
+
+  var_dump($request);
+  var_dump($response);
   $response = explode("&", $response);
   foreach($response as $data) {
     echo $data . "<br />";
   }
+
+
    ?>
 </p>
 

@@ -37,6 +37,7 @@ $id = rand();
 <input type="hidden" name="PARTNER" value="PayPal">
 <input type="hidden" name="AMOUNT" value="5.00">
 <input type="hidden" name="TYPE" value="S">
+<input type="hidden" name="TEMPLATE" value = "MOBILE" />
 <input type="submit" value="Click here to Purchase">
 </form>
 
@@ -48,10 +49,13 @@ $id = rand();
 <form method="POST" action="token.php">
   <!-- The following fields are required: -->
   <input type = "hidden" name = "URL" value = "https://pilot-payflowpro.paypal.com" />
-  <input type="hidden" name="VENDOR" value="wpittmanpro"/>
-  <input type="hidden" name="USER" value="wpittmanpro" />
-  <input type ="hidden" name ="PWD" value = "Element7430" />
-  <input type="hidden" name="PARTNER" value="paypal">
+  <!--<input type="hidden" name="VENDOR" value="ztestpayflowpro"/> <_____ BT account
+  <input type="hidden" name="USER" value="btuser1" />
+  <input type ="hidden" name ="PWD" value = "Mtspassword1" />-->
+  <input type="hidden" name="VENDOR" value="wpittman" />
+  <input type="hidden" name="USER" value="wpittman" />
+  <input type="hidden" name="PWD" value="Element7430" />
+  <input type="hidden" name="PARTNER" value="paypal" />
   <input type="hidden" name="AMT" value="10">
   <input type = "hidden" name = "TENDER" value = "P" />
   <input type="hidden" name="TRXTYPE" value="S">

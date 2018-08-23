@@ -1,12 +1,12 @@
 <?php
  $actionType = $_REQUEST['actionType'];
- $headers[] = "X-PAYPAL-SECURITY-USERID: wpittman_api1.paypal.com";
- $headers[] = "X-PAYPAL-SECURITY-PASSWORD: C7CM265TPAMF2LM7";
- $headers[] = "X-PAYPAL-SECURITY-SIGNATURE: AFcWxV21C7fd0v3bYYYRCpSSRl31AART2vD.JQ4wJAUVJrAyxLH3IrN3";
+ $headers[] = "X-PAYPAL-SECURITY-USERID: wpittmanHere_api1.paypal.com";
+ $headers[] = "X-PAYPAL-SECURITY-PASSWORD: KF7W7LPSDUHW9NBP";
+ $headers[] = "X-PAYPAL-SECURITY-SIGNATURE: A5v94doyzkAL45GWSOpp3GzSpU1aAG1YO85W.t9ychusFVJndzqXJsfL";
  $headers[] = "X-PAYPAL-REQUEST-DATA-FORMAT: NV";
  $headers[] = "X-PAYPAL-RESPONSE-DATA-FORMAT: NV";
  $headers[] = "X-PAYPAL-APPLICATION-ID: APP-80W284485P519543T";
- $headers[] = "X-PAYPAL-SANDBOX-EMAIL-ADDRESS: wpittman@paypal.com";
+ $headers[] = "X-PAYPAL-SANDBOX-EMAIL-ADDRESS: wpittmanHere@paypal.com";
 
 $url = "https://svcs.sandbox.paypal.com/AdaptivePayments/Pay";
 $ch = curl_init();
@@ -22,8 +22,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_TIMEOUT, 90);
 curl_setopt($ch, CURLOPT_POST, 1);
 
-$request ="requestEnvelope.errorLanguage=en_US&actionType=$actionType&senderEmail=wpittman@paypal.com&cancelUrl=https://rest-wpittman.c9users.io/urls/cancel.php
-&currencyCode=USD&receiverList.receiver(0).email=wpittmanBusiness1@paypal.com&receiverList.receiver(0).amount=100.00
+$request ="requestEnvelope.errorLanguage=en_US&actionType=$actionType&senderEmail=wpittmanHere@paypal.com&requireShippingAddressSelection=true&cancelUrl=https://rest-wpittman.c9users.io/urls/cancel.php
+&currencyCode=USD&receiverList.receiver(0).email=wpittman@paypal.com&receiverList.receiver(0).amount=100.00
 &returnUrl=https://rest-wpittman.c9users.io/urls/redirect.php";
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, $request);

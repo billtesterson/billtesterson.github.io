@@ -117,14 +117,20 @@
 
     <div class = "col-md-4">
       <h1>AVS Decline</h1>
-      <form method="POST" action="https://pilot-payflowpro.paypal.com">
+      <form method="POST" action="fpsDecline.php">
         <!-- The following fields are required: -->
         <input type = "hidden" name = "VENDOR" value = "wpittmanpro4"/>
         <input type = "hidden" name = "USER" value = "wpittmanpro4" />
         <input type = "hidden" name = "PWD" value = "Element7430" />
         <input type = "hidden" name = "PARTNER" value="paypal">
-        <input type = "hidden" name = "TRXTYPE" value = "U" />
-        <input type = "hidden" name = "ORIGID" value = "" />
+        <input type = "hidden" name = "TRXTYPE" value = "A" />
+        <input type = "hidden" name ="AMT" value = "10.00" />
+        <input type = "hidden" name ="TENDER" value = "C" />
+        <input type = "hidden" name ="ACCT" value = "4493483676008182" />
+        <input type ="hidden" name = "CUSTIP" value = "10.248.136.194" />
+        <input type = "hidden" name = "EXPDATE" value = "0923" />
+
+      <!--  <input type = "hidden" name = "ORIGID" value = "" />-->
         <input type = "hidden" name = "UPDATEACTION" value = "FPS_MERCHANT_DECLINE" />
         <input type = "submit" value = "Decline" />
       </form>

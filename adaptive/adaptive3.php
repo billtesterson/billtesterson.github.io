@@ -1,8 +1,8 @@
 <?php
 $payKey = $_REQUEST['payKey'];
- $headers[] = "X-PAYPAL-SECURITY-USERID: wpittman_api1.paypal.com";
- $headers[] = "X-PAYPAL-SECURITY-PASSWORD: C7CM265TPAMF2LM7";
- $headers[] = "X-PAYPAL-SECURITY-SIGNATURE: AFcWxV21C7fd0v3bYYYRCpSSRl31AART2vD.JQ4wJAUVJrAyxLH3IrN3";
+$headers[] = "X-PAYPAL-SECURITY-USERID: wpittmanHere_api1.paypal.com";
+$headers[] = "X-PAYPAL-SECURITY-PASSWORD: KF7W7LPSDUHW9NBP";
+$headers[] = "X-PAYPAL-SECURITY-SIGNATURE: A5v94doyzkAL45GWSOpp3GzSpU1aAG1YO85W.t9ychusFVJndzqXJsfL";
  $headers[] = "X-PAYPAL-REQUEST-DATA-FORMAT: NV";
  $headers[] = "X-PAYPAL-RESPONSE-DATA-FORMAT: NV";
  $headers[] = "X-PAYPAL-APPLICATION-ID: APP-80W284485P519543T";
@@ -57,6 +57,10 @@ $response = curl_exec($ch);
             echo $index . "<br>";
         }
         ?>
+
+        <br />
+        <br />
+        <a href = "adaptive1.php"><h3>Back to Adaptive Payments</h3></a>
 </div>
 
 

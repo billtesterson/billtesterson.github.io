@@ -17,11 +17,31 @@
   </script>
   <div id = "header"></div>
 <div class = "container">
+  <div class = "row">
+    <div class = "col-md-4">
     <h1>Adaptive Payments</h1>
     <form method = "post" action = "adaptive2.php">
       <input type = "text" name = "actionType" placeholder = "PAY, CREATE, OR PAY_PRIMARY" />
       <input type = "submit" />
     </form>
+  </div>
+  <div class = "col-md-4">
+    <h1>Make Adaptive Payment</h1>
+    <form method = "post" action = "makeAdaptive.php">
+      <input type = "submit" />
+    </form>
+  </div>
+
+  <div class = "col-md-4">
+    <h1>Create Account</h1>
+    <form method = "post" action = "createAccount.php">
+      <input type = "email" name = "email" placeholder = "example@mail.com" />
+      <input type = "submit" />
+    </form>
+  </div>
+  </div>
+
+
 
     <div class = "row">
       <div class = "col-md-4">
